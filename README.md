@@ -23,6 +23,20 @@ The interface keeps the agent runtime outside the inference backend.
 Conversation state, tools, provenance, authorization, and epistemic logic
 belong to the calling application.
 
+## JSON
+
+The interface vendors the MIT-licensed lunajson implementation under
+`./lunajson` and uses it directly for JSON encoding and decoding. This keeps
+the interface self-contained and avoids requiring a separate JSON dependency
+at runtime.
+
+The vendored source comes from:
+
+`https://github.com/OverrideDeveloper/lunajson`
+
+The JSON implementation provides `encode` and `decode`, with streaming/SAX
+support available through the vendored module as well.
+
 ## MVP
 
 The current MVP provides:

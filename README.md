@@ -38,6 +38,11 @@ The current MVP provides:
 The llama.cpp backend expects a running server with its OpenAI-compatible
 `/v1/chat/completions` endpoint and `/health` endpoint.
 
+The default local development endpoint is `127.0.0.1:50006`. Port `50006`
+is in the IANA dynamic/private port range and does not collide with
+AliceWebAI's `8080` default. Applications may override both host and port at
+runtime.
+
 ## Example
 
 Start a llama.cpp server separately, then run:
@@ -49,7 +54,7 @@ local LlamaCpp = require("./backends.llama_cpp")
 local llama = LlamaInterface.new({
     backend = LlamaCpp.new({
         host = "127.0.0.1",
-        port = 8080,
+        port = 50006,
     }),
 })
 

@@ -17,7 +17,7 @@ function LlamaCpp.new(options)
 
     return setmetatable({
         host = options.host or "127.0.0.1",
-        port = options.port or 8080,
+        port = options.port or 50006,
         path = options.path or "/v1/chat/completions",
         model = options.model,
         user_agent = options.user_agent or "lua-llama-interface/0.1",

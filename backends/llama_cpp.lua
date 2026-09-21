@@ -3,7 +3,7 @@
 -- llama.cpp's server.
 
 local https = require("https")
-local json = require("json")
+local json = require("./lunajson/lunajson")
 
 local LlamaCpp = {}
 LlamaCpp.__index = LlamaCpp

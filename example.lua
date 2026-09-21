@@ -4,7 +4,7 @@ local LlamaCpp = require("./backends.llama_cpp")
 local llama = LlamaInterface.new({
     backend = LlamaCpp.new({
         host = "127.0.0.1",
-        port = 8080,
+        port = 50006,
     }),
 
     on_event = function(event)
